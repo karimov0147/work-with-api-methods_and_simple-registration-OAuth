@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_height="match_parent">
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:id="@+id/progress"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/toLoginBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:layout_marginBottom="30dp"
+        android:text="I have Account"/>
+
+    <EditText
+        android:id="@+id/firstName"
+        android:hint="first name"
+        android:text="Admin"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_margin="20dp"/>
+    <EditText
+        android:id="@+id/lastName"
+        android:hint="last name"
+        android:text="user"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_margin="20dp"/>
+    <EditText
+        android:id="@+id/phone"
+        android:hint="phone"
+        android:text="+998906127581"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_margin="20dp"/>
+    <EditText
+        android:id="@+id/password"
+        android:hint="password"
+        android:text="234234"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_margin="20dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="false"
+        android:text="Next"
+        android:id="@+id/save"/>
+
+
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

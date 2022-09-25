@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/startScreen">
+
+    <fragment
+        tools:layout="@layout/screen_auth"
+        android:id="@+id/authScreen"
+        android:name="com.quattroSoft.contactAppV4.ui.screens.AuthScreen"
+        android:label="AuthScreen" >
+        <action
+            android:id="@+id/action_authScreen_to_verifyScreen"
+            app:destination="@id/verifyScreen" />
+        <action
+            android:id="@+id/action_authScreen_to_loginScreen"
+            app:destination="@id/loginScreen" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/screen_verify"
+        android:id="@+id/verifyScreen"
+        android:name="com.quattroSoft.contactAppV4.ui.screens.VerifyScreen"
+        android:label="VerifyScreen" >
+        <action
+            android:id="@+id/action_verifyScreen_to_dashboardScreen"
+            app:destination="@id/dashboardScreen" />
+        <argument
+            android:name="number"
+            app:argType="string" />
+        <argument
+            android:name="massage"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/screen_start"
+        android:id="@+id/startScreen"
+        android:name="com.quattroSoft.contactAppV4.ui.screens.StartScreen"
+        android:label="StartScreen" >
+        <action
+            android:id="@+id/action_startScreen_to_authScreen"
+            app:destination="@id/authScreen"
+            app:popUpTo="@id/startScreen"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_startScreen_to_dashboardScreen"
+            app:destination="@id/dashboardScreen"
+            app:popUpTo="@id/startScreen"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/screen_dashboard"
+        android:id="@+id/dashboardScreen"
+        android:name="com.quattroSoft.contactAppV4.ui.screens.DashboardScreen"
+        android:label="DashboardScreen" />
+    <fragment
+        tools:layout="@layout/screen_login"
+        android:id="@+id/loginScreen"
+        android:name="com.quattroSoft.contactAppV4.ui.screens.LoginScreen"
+        android:label="LoginScreen" >
+        <action
+            android:id="@+id/action_loginScreen_to_dashboardScreen"
+            app:destination="@id/dashboardScreen"
+            app:popUpTo="@id/loginScreen"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>
